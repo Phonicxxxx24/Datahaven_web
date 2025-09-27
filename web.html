@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DataHaven Contribution Strategy: Earning Keys & Acorns</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        /* CRITICAL: DataHaven Brand Colors */
+        .color-dark { color: #2A1605; }
+        .color-primary { color: #D95441; }
+        .color-secondary { color: #485249; } /* Forest Green */
+        .bg-cream { background-color: #FEF6EC; }
+        .bg-light-accent { background-color: #E2CDB0; }
+        
+        /* New: Full Background Image with Low Opacity */
+        body {
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
+            background-color: #FEF6EC; 
+            /* Using a generic placeholder image URL based on the visual style provided (background3.jpg) */
+            background-image: url('https://i.postimg.cc/FzM22DBf/Data-Haven-Hero-For-Animation.png'); 
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center top;
+            position: relative;
+        }
+
+        /* Overlay to control opacity and ensure text contrast */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* Applying low opacity to the background image through a pseudo-element */
+            background-image: url('https://i.postimg.cc/FzM22DBf/Data-Haven-Hero-For-Animation.png'); 
+            background-size: cover;
+            background-attachment: fixed;
+            opacity: 0.1; /* Low opacity for professional look */
+            pointer-events: none;
+        }
+
+        /* Header Bar Styling for Logo */
+        #main-header-bar {
+            position: sticky;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 50;
+            background-color: rgba(254, 246, 236, 0.95); /* Semi-transparent cream */
+            padding: 1rem 0;
+            border-bottom: 1px solid #E2CDB0;
+        }
+
+        #main-header-bar img {
+            max-height: 40px; 
+            width: auto;
+        }
+        
+        /* General Typography */
+        h1, h2, h3 {
+            font-weight: 700;
+        }
+
+        /* Chart Container Styling */
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        
+        /* Card Styling */
+        .reward-card {
+            border: 1px solid #485249;
+        }
+        .card-shadow {
+             box-shadow: 0 8px 16px -4px rgba(42, 22, 5, 0.15);
+        }
+
+        /* PHASE 3: Simplified Dot List Styling (Fixed) */
+        .list-dot {
+            list-style: none;
+            padding-left: 0;
+        }
+        .list-dot > li {
+            position: relative;
+            padding-left: 1.5rem; /* Space for the dot */
+            margin-bottom: 1.5rem;
+        }
+        .list-dot > li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.5rem; /* Align vertically with the text */
+            width: 0.75rem; /* Size of the dot */
+            height: 0.75rem;
+            border-radius: 9999px;
+            background-color: #D95441; /* Red Dot */
+            border: 2px solid #E2CDB0; /* Caramel border */
+            transform: translateY(-50%);
+        }
+
+    </style>
+</head>
+<body class="bg-cream">
+
+    <div id="main-header-bar">
+        <div class="container mx-auto px-4 md:px-8 max-w-7xl flex items-center">
+            <!-- PASTE YOUR DIRECT IMAGE URL HERE (e.g., from Imgur) -->
+            <img src="https://i.postimg.cc/jj4kMsTX/2-Data-Haven-Primary-Wordmark-Green-1.png" alt="DataHaven Logo" class="h-10">
+        </div>
+    </div>
+
+    <div class="container mx-auto p-4 md:p-8 max-w-7xl relative">
+
+        <header class="text-center mb-12 pt-4 relative"> 
+            <h1 class="text-3xl md:text-5xl font-black mb-2 color-dark">Contribution Strategy & Deep Dive</h1>
+            <p class="text-lg md:text-xl font-medium color-secondary">The Ultimate Guide to Earning Keys & Acorns</p>
+        </header>
+
+        <main class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            
+            <!-- PHASE 1: PROJECT FUNDAMENTALS & REWARD SYSTEM -->
+            <section class="lg:col-span-3 bg-white rounded-xl card-shadow p-6 mb-6">
+                <h2 class="text-2xl font-bold mb-6 text-center color-dark">Intelligence Snapshot: Fundamentals & Reward Potential</h2>
+                <p class="text-center mb-6 max-w-4xl mx-auto color-secondary">
+                    DataHaven is positioned as a leading AI-first storage solution, secured by <strong>EigenLayer restaking</strong>. The <strong>"Moose Awakens"</strong> program is the explicit mechanism for rewarding early community commitment via <strong>Keys</strong> (high-value, technical/creative contribution) and <strong>Acorns</strong> (basic community engagement). <strong>Keys</strong> are paramount, acting as the primary lever for high-tier roles and future benefits.
+                </p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                    <div class="reward-card p-4 rounded-lg bg-light-accent text-center">
+                        <span class="text-3xl color-dark">🔑</span>
+                        <h3 class="font-bold mt-2 color-dark">Keys (High Value)</h3>
+                        <p class="text-sm color-secondary">Earned via Testnet participation, technical guides, bug reports, and high-quality educational content (Threads).</p>
+                    </div>
+                    <div class="reward-card p-4 rounded-lg bg-light-accent text-center">
+                        <span class="text-3xl color-dark">🌰</span>
+                        <h3 class="font-bold mt-2 color-dark">Acorns (Engagement)</h3>
+                        <p class="text-sm color-secondary">Earned via Discord events, helpful chat activity, basic social media support, and participation in simple quests.</p>
+                    </div>
+                    <div class="reward-card p-4 rounded-lg bg-light-accent text-center">
+                        <span class="text-3xl color-dark">🔄</span>
+                        <h3 class="font-bold mt-2 color-dark">Conversion Rate</h3>
+                        <p class="text-sm color-secondary">10 <strong>Acorns</strong> = 1 <strong>Key</strong>. Focus must be on generating <strong>Keys</strong> directly.</p>
+                    </div>
+                </div>
+
+                <!-- Radar Chart for Project Strength -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center bg-cream p-6 rounded-xl border border-secondary">
+                    <div class="chart-container">
+                        <canvas id="opportunityScorecardChart"></canvas>
+                    </div>
+                    <div class="space-y-3">
+                         <h3 class="text-xl font-bold mb-2 color-dark">Fundamentals Assessment (9/10 Target)</h3>
+                        <div class="flex items-center justify-between border-b border-secondary pb-2">
+                            <span class="font-semibold text-sm color-secondary">Team Credibility (Moonbeam/EigenLayer Track Record)</span>
+                            <span class="text-lg font-bold py-1 px-3 rounded-md bg-light-accent color-dark">8/10</span>
+                        </div>
+                        <div class="flex items-center justify-between border-b border-secondary pb-2">
+                            <span class="font-semibold text-sm color-secondary">Technology Innovation (AI-First Storage)</span>
+                            <span class="text-lg font-bold py-1 px-3 rounded-md bg-light-accent color-dark">9/10</span>
+                        </div>
+                        <div class="flex items-center justify-between border-b border-secondary pb-2">
+                            <span class="font-semibold text-sm color-secondary">Community Strength (The Moose Awakens Program)</span>
+                            <span class="text-lg font-bold py-1 px-3 rounded-md bg-light-accent color-dark">9/10</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="font-semibold text-sm color-secondary">Reward System Potential (Fair Launch Strategy)</span>
+                            <span class="text-lg font-bold py-1 px-3 rounded-md text-white" style="background-color: #D95441;">9/10</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- PHASE 2: CONTENT STRATEGY DEEP DIVE (KEY GENERATION) -->
+            <section class="lg:col-span-2 bg-white rounded-xl card-shadow p-6">
+                <h2 class="text-2xl font-bold mb-4 color-dark">PHASE 2: Technical Deep Dive & Key Generation Strategy</h2>
+                <p class="mb-6 color-secondary">
+                    The project's messaging is highly technical, focusing on <strong>AVS architecture</strong>, <strong>EigenLayer restaking</strong>, and <strong>EVM-native compatibility</strong>. Content that earns <strong>Keys</strong> must align with this intellectual rigor. Volume of content is secondary to the quality of technical insight.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <h3 class="font-semibold text-lg mb-2 color-dark">Optimal Content Formats for Keys</h3>
+                        <!-- Donut Chart -->
+                        <div class="chart-container" style="height: 250px; max-height: 300px;">
+                            <canvas id="contentFormatChart"></canvas>
+                        </div>
+                        <p class="text-sm color-secondary mt-2">
+                            <strong>Technical Threads</strong> (45%) and <strong>Project Guides</strong> (30%) are the core <strong>Key</strong>-earning vectors. These formats allow for detailed exposition on the <strong>AVS</strong> and EVM integration, which is the project's primary value proposition.
+                        </p>
+                    </div>
+                     <div>
+                        <h3 class="font-semibold text-lg mb-2 color-dark">Technical Content Themes (The Key Triggers)</h3>
+                        <ul class="space-y-3">
+                            <li class="p-3 bg-light-accent rounded-md border-l-4 border-l-primary" style="border-left-color: #D95441;">
+                                <span class="font-medium color-dark">Verifiable AI & Data Provenance:</span> Deep dives on how DataHaven uses Merkle Trees and proofs to guarantee data integrity for ML models.
+                            </li>
+                            <li class="p-3 bg-light-accent rounded-md border-l-4 border-l-primary" style="border-left-color: #D95441;">
+                                <span class="font-medium color-dark"><strong>EigenLayer</strong> & Economic Security:</span> Explaining the inherited security model and the role of $GLMR staking in the ecosystem.
+                            </li>
+                            <li class="p-3 bg-light-accent rounded-md border-l-4 border-l-primary" style="border-left-color: #D95441;">
+                                <span class="font-medium color-dark"><strong>EVM-Native</strong> Composable Architecture:</span> Analyzing the dual-layer system and how dApps can build data marketplaces on the chain.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PHASE 3: TESTNET ROADMAP & ACTIONABLE STEPS -->
+            <section class="bg-white rounded-xl card-shadow p-6">
+                <h2 class="text-2xl font-bold mb-4 color-dark">PHASE 3: Testnet & Loyalty Roadmap</h2>
+                 <p class="mb-6 color-secondary">
+                    The upcoming Testnet launch is the single biggest opportunity for <strong>Key</strong> generation. Your activity must be verifiable and focused on stress-testing the core <strong>AVS architecture</strong> and reporting bugs.
+                </p>
+                
+                <ul class="list-dot">
+                    <li>
+                        <h3 class="text-xl font-bold color-dark">Testnet Preparation (Immediate)</h3>
+                        <p class="mt-2 text-sm color-secondary font-semibold">Goal: <strong>Acorns</strong> (Community Integration)</p>
+                        <ul class="list-disc list-inside ml-4 mt-1 text-sm color-secondary">
+                            <li>Secure Discord roles & complete simple Zealy/Quest tasks.</li>
+                            <li>Develop 2-3 content drafts on DataHaven's EVM utility.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3 class="text-xl font-bold color-dark">Testnet Execution (Next Month)</h3>
+                        <p class="mt-2 text-sm color-secondary font-semibold">Goal: <strong>Keys</strong> (Verifiable Contribution)</p>
+                        <ul class="list-disc list-inside ml-4 mt-1 text-sm color-secondary">
+                            <li>Execute complex interactions (e.g., mock data marketplace transactions).</li>
+                            <li>Submit clear, detailed bug reports and technical feedback (high <strong>Key</strong> value).</li>
+                        </ul>
+                    </li>
+                    <li>
+                         <h3 class="text-xl font-bold color-dark">Post-Testnet Deep Loyalty</h3>
+                        <p class="mt-2 text-sm color-secondary font-semibold">Goal: <strong>Keys</strong> (Long-term Role)</p>
+                        <ul class="list-disc list-inside ml-4 mt-1 text-sm color-secondary">
+                            <li>Publish a comprehensive Testnet analysis/guide (Max <strong>Key</strong> potential).</li>
+                            <li>Position for governance or ambassador role (requires high <strong>Key</strong> count).</li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </section>
+
+            <!-- PHASE 4: COMPETITIVE POSITIONING & RISK MITIGATION -->
+             <section class="lg:col-span-3 bg-white rounded-xl card-shadow p-6">
+                <h2 class="text-2xl font-bold text-center mb-6 color-dark">PHASE 4: Risk Mitigation & Competitive Content Positioning</h2>
+                <p class="text-center mb-8 max-w-4xl mx-auto color-secondary">
+                    To stand out, your strategy must move beyond generic promotion. Successful contributors (those who accumulated top rewards in comparable systems) prioritize technical depth and consistent, non-spam engagement. Authenticity is the ultimate differentiator.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-light-accent p-4 rounded-lg shadow-inner border border-secondary">
+                        <h3 class="font-bold text-xl mb-2 flex items-center color-primary"><span class="text-2xl mr-2">🎯</span> Differentiation (Keys)</h3>
+                        <ul class="list-disc list-inside ml-4 text-sm color-secondary space-y-1">
+                            <li>Create content comparing DataHaven to Filecoin/Arweave on <strong>AI-readiness</strong>.</li>
+                            <li>Simulate a business use-case (e.g., RWA tokenization) on the platform.</li>
+                            <li>Become the "go-to" source for a specific technical domain (e.g., <strong>AVS architecture</strong>).</li>
+                        </ul>
+                    </div>
+                    <div class="bg-light-accent p-4 rounded-lg shadow-inner border border-secondary">
+                        <h3 class="font-bold text-xl mb-2 flex items-center color-primary"><span class="text-2xl mr-2">🛡️</span> Risk Mitigation (Spam Avoidance)</h3>
+                        <ul class="list-disc list-inside ml-4 text-sm color-secondary space-y-1">
+                            <li>Avoid repetitive phrases, tags, or links (Bot-like behavior).</li>
+                            <li>Ensure content has >280 characters of unique analysis.</li>
+                            <li>Do not use the forbidden term or its variants in community channels.</li>
+                        </ul>
+                    </div>
+                    <div class="bg-light-accent p-4 rounded-lg shadow-inner border border-secondary">
+                        <h3 class="font-bold text-xl mb-2 flex items-center color-primary"><span class="text-2xl mr-2">📈</span> Optimal Timing</h3>
+                        <ul class="list-disc list-inside ml-4 text-sm color-secondary space-y-1">
+                            <li>Post technical content 1-2 hours after Core Team announcements (amplification).</li>
+                            <li>Focus on engagement activity during Discord event windows for maximum <strong>Acorn</strong> yield.</li>
+                            <li><strong>Avoid</strong> Monday morning post-dumps; favor mid-week (Tues/Weds) for technical threads.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <script>
+        const wrapLabel = (label, maxLength = 16) => {
+            let currentLine = '';
+            if (typeof label !== 'string' || label.length <= maxLength) {
+                return label;
+            }
+            const words = label.split(' ');
+            const lines = [];
+            words.forEach(word => {
+                if ((currentLine + ' ' + word).trim().length > maxLength) {
+                    lines.push(currentLine.trim());
+                    currentLine = word;
+                } else {
+                    currentLine = (currentLine + ' ' + word).trim();
+                }
+            });
+            if (currentLine) {
+                lines.push(currentLine.trim());
+            }
+            return lines;
+        };
+        
+        const tooltipTitleCallback = (tooltipItems) => {
+            const item = tooltipItems[0];
+            let label = item.chart.data.labels[item.dataIndex];
+            if (Array.isArray(label)) {
+              return label.join(' ');
+            }
+            return label;
+        };
+        
+        const defaultChartOptions = {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    position: 'top',
+                    labels: {
+                        color: '#485249' 
+                    }
+                },
+                tooltip: {
+                    callbacks: {
+                        title: tooltipTitleCallback
+                    }
+                }
+            }
+        };
+
+        const colors = {
+            dark: '#2A1605',      /* Brown Black */
+            primary: '#D95441',   /* Red */
+            secondary: '#485249', /* Forest Green */
+            accent: '#E2CDB0',    /* Caramel */
+            light: '#FEF6EC',     /* Cream */
+            grid: 'rgba(72, 82, 73, 0.1)' 
+        };
+
+        const radarCtx = document.getElementById('opportunityScorecardChart').getContext('2d');
+        const radarLabels = ['Team Credibility', 'Technology Innovation', 'Community Strength', 'Market Positioning', 'Reward System Potential'];
+        new Chart(radarCtx, {
+            type: 'radar',
+            data: {
+                labels: radarLabels.map(l => wrapLabel(l)),
+                datasets: [{
+                    label: 'Project Strength Score (Max 10)',
+                    data: [8, 9, 9, 7, 9],
+                    backgroundColor: 'rgba(217, 84, 65, 0.3)', /* Primary with opacity */
+                    borderColor: colors.primary,
+                    pointBackgroundColor: colors.primary,
+                    pointBorderColor: '#fff',
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: colors.primary
+                }]
+            },
+            options: {
+                ...defaultChartOptions,
+                scales: {
+                    r: {
+                        angleLines: { color: colors.grid },
+                        grid: { color: colors.grid },
+                        pointLabels: { 
+                            color: colors.dark,
+                            font: { size: 12, weight: 'bold' }
+                        },
+                        ticks: {
+                            color: colors.secondary,
+                            backdropColor: colors.light,
+                            stepSize: 2
+                        },
+                        suggestedMin: 0,
+                        suggestedMax: 10
+                    }
+                }
+            }
+        });
+
+        const donutCtx = document.getElementById('contentFormatChart').getContext('2d');
+        new Chart(donutCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Technical Threads (Keys)', 'Project Guides (Keys)', 'Visual Content (Acorns/Keys)', 'Simple Engagement (Acorns)'],
+                datasets: [{
+                    label: 'Key Earning Weighting',
+                    data: [45, 30, 15, 10],
+                    backgroundColor: [colors.dark, colors.primary, colors.secondary, colors.accent],
+                    borderColor: colors.light,
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                ...defaultChartOptions,
+                plugins: { ...defaultChartOptions.plugins, legend: { position: 'bottom' } }
+            }
+        });
+
+    </script>
+</body>
+</html>
